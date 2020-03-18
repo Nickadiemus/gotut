@@ -36,9 +36,8 @@ func checkPos(position int32, c []int32, jumps *int) int32 {
 	// }
 
 	if (position+2 >= int32(len(c))) || (position+1 >= int32(len(c))) || (position >= int32(len(c))) {
-		if position == int32(len(c)) {
-			*jumps++
-
+		if position == int32(len(c) - 1) {
+			if c[position] 
 		}
 		return -1
 	}
@@ -70,7 +69,6 @@ func jumpingOnClouds(c []int32) int32 {
 		}
 	}
 	return int32(-1)
-
 }
 
 func main() {

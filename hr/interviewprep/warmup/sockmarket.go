@@ -9,13 +9,14 @@ func unique(li []int32) []int32 {
 	//map
 	deduplist := make(map[int32]bool)
 	list := []int32{}
-
+	// {10, 20, 20, 10, 10, 30, 50, 10, 20}
 	for _, key := range li {
 		fmt.Println(key)
-		if _, value := deduplist[key]; !value {
+		if _, value := deduplist[key]; !value { // Key: 10 Value: false
 			deduplist[key] = true
 			list = append(list, key)
 		}
+
 	}
 	return list
 }
@@ -50,7 +51,6 @@ func sockMerchant(n int32, ar []int32) int32 {
 func main() {
 	var n int32 = 9
 	ar := []int32{10, 20, 20, 10, 10, 30, 50, 10, 20}
-
 	sockMerchant(n, ar)
 
 }
